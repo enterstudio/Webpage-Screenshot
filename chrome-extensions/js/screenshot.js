@@ -42,7 +42,17 @@ var screenshot = {
 
   captureRegion:function() {
     screenshot.tryGetUrl(function () {
-      chrome.tabs.executeScript(screenshot.thisTabId, {code:'load_cropper_without_selection()'})
+      chrome.tabs.executeScript(screenshot.thisTabId, {file:'/libs/jquery.js'}, function(){
+        chrome.tabs.executeScript(screenshot.thisTabId, {file:'/js/plugin.js'}, function(){
+          chrome.tabs.executeScript(screenshot.thisTabId, {file:'/js/pluginsLib.js'}, function(){
+            chrome.tabs.executeScript(screenshot.thisTabId, {file:'/js/pluginsBuiltIn.js'}, function(){
+              chrome.tabs.executeScript(screenshot.thisTabId, {file:'/libs/cropper.js'}, function(){
+                chrome.tabs.executeScript(screenshot.thisTabId, {code:'load_cropper_without_selection()'});
+              }); 
+            }); 
+          }); 
+        });  
+      });  
     });
   },
 
