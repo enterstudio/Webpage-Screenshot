@@ -1,7 +1,9 @@
 
-Sorry, about my english. My developing skills are better than English :)
+####For now, it's just a fork from https://github.com/AminaG/Webpage-Screenshot
+####But will fix some bug, translate some text and also add some new features.
 
-This project is monitored and I am watching and accepting pulling request.
+### Following is the readme from https://github.com/AminaG/Webpage-Screenshot
+------
 
 You are welcome to fork the project, fix and add new features. (even small fixes are welcome). If it working, I will merge and publish it.
 
